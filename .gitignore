@@ -1,0 +1,22 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editori
+.vscode/
+.idea/
+*.swp
+
+# Ovisnosti i build
+node_modules/
+dist/
+.cache/
+
+# Logovi
+*.log
+npm-debug.log*
+
+# Okolina
+.env
+.env.local
