@@ -80,7 +80,10 @@ tailwind.config = {
 
 <style>
   html { scroll-behavior: smooth; scroll-padding-top: 84px; }
-  body { -webkit-font-smoothing: antialiased; }
+  /* Sigurnosna brana: nijedna animacija ili dekoracija ne smije stvoriti
+     vodoravni scroll. `clip` ne stvara scroll kontejner (Safari 16+),
+     `hidden` je fallback za starije preglednike. */
+  body { -webkit-font-smoothing: antialiased; overflow-x: hidden; overflow-x: clip; }
   ::selection { background: #06B6D4; color: #fff; }
 
   ::-webkit-scrollbar { width: 10px; }
@@ -90,8 +93,13 @@ tailwind.config = {
 
   /* Reveal animacije na scroll */
   .reveal { opacity: 0; transform: translateY(30px); transition: opacity .85s cubic-bezier(.16,1,.3,1), transform .85s cubic-bezier(.16,1,.3,1); }
-  .reveal-left { opacity: 0; transform: translateX(-34px); transition: opacity .95s cubic-bezier(.16,1,.3,1), transform .95s cubic-bezier(.16,1,.3,1); }
-  .reveal-right { opacity: 0; transform: translateX(34px); transition: opacity .95s cubic-bezier(.16,1,.3,1), transform .95s cubic-bezier(.16,1,.3,1); }
+  /* Pomak je manji od paddinga sekcije (32px od sm nadalje) pa ne moze siriti dokument */
+  .reveal-left { opacity: 0; transform: translateX(-24px); transition: opacity .95s cubic-bezier(.16,1,.3,1), transform .95s cubic-bezier(.16,1,.3,1); }
+  .reveal-right { opacity: 0; transform: translateX(24px); transition: opacity .95s cubic-bezier(.16,1,.3,1), transform .95s cubic-bezier(.16,1,.3,1); }
+  /* Ispod lg stupci su ionako posloženi jedan ispod drugog — tada animiramo okomito */
+  @media (max-width: 1023px) {
+    .reveal-left, .reveal-right { transform: translateY(30px); }
+  }
   .reveal-zoom { opacity: 0; transform: scale(.95); transition: opacity .95s ease, transform .95s cubic-bezier(.16,1,.3,1); }
   .is-visible { opacity: 1 !important; transform: none !important; }
 
