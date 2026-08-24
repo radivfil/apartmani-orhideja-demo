@@ -71,7 +71,7 @@ tailwind.config = {
     "postalCode": "51280",
     "addressCountry": "HR"
   },
-  "telephone": "+385 91 234 5678",
+  "telephone": "+385 91 610 9027",
   "email": "info@apartmani-orhideja.hr",
   "priceRange": "€€",
   "aggregateRating": { "@type": "AggregateRating", "ratingValue": "9.4", "bestRating": "10", "reviewCount": "218" }
@@ -196,7 +196,9 @@ tailwind.config = {
     </div>
   </nav>
 
-  <div id="mobileMenu" class="lg:hidden max-h-0 overflow-hidden bg-white/97 backdrop-blur-md transition-all duration-500 shadow-soft">
+  <!-- bg-white/95: ista vrijednost kao navigacija pa nema vidljivog šava između njih.
+       (bg-white/97 nije postojala — Tailwindova ljestvica ide u koracima od 5.) -->
+  <div id="mobileMenu" class="lg:hidden max-h-0 overflow-hidden bg-white/95 backdrop-blur-md transition-all duration-500 shadow-soft">
     <div class="px-6 py-5 flex flex-col text-ink">
       <a href="#pocetna"   class="mob-link py-3.5 border-b border-stone-dark font-medium" data-hr="Početna"   data-en="Home">Početna</a>
       <a href="#apartmani" class="mob-link py-3.5 border-b border-stone-dark font-medium" data-hr="Apartmani" data-en="Apartments">Apartmani</a>
@@ -571,13 +573,13 @@ tailwind.config = {
         </p>
 
         <div class="space-y-4 mb-10">
-          <a href="tel:+385912345678" class="group flex items-center gap-4 p-4 rounded-2xl bg-stone hover:bg-sea/10 transition-colors">
+          <a href="tel:+385916109027" class="group flex items-center gap-4 p-4 rounded-2xl bg-stone hover:bg-sea/10 transition-colors">
             <span class="grid place-items-center w-12 h-12 rounded-full bg-sea text-white shrink-0">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
             </span>
             <span>
               <span class="block text-xs uppercase tracking-[.18em] text-ink-soft" data-hr="Nazovite nas" data-en="Call us">Nazovite nas</span>
-              <span class="block font-semibold text-lg">+385 91 234 5678</span>
+              <span class="block font-semibold text-lg">+385 91 610 9027</span>
             </span>
           </a>
 
@@ -591,7 +593,7 @@ tailwind.config = {
             </span>
           </a>
 
-          <a href="https://wa.me/385912345678" target="_blank" rel="noopener" class="group flex items-center gap-4 p-4 rounded-2xl bg-stone hover:bg-[#25D366]/10 transition-colors">
+          <a href="https://wa.me/385916109027" target="_blank" rel="noopener" class="group flex items-center gap-4 p-4 rounded-2xl bg-stone hover:bg-[#25D366]/10 transition-colors">
             <span class="grid place-items-center w-12 h-12 rounded-full bg-[#25D366] text-white shrink-0">
               <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5v-.5c-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2m0 18.2c-1.6 0-3.2-.5-4.6-1.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2"/></svg>
             </span>
@@ -750,7 +752,7 @@ tailwind.config = {
         <ul class="space-y-3 text-sm">
           <li>Banjol 412, 51280 Rab</li>
           <li><span data-hr="Hrvatska" data-en="Croatia">Hrvatska</span></li>
-          <li><a href="tel:+385912345678" class="hover:text-gold transition-colors">+385 91 234 5678</a></li>
+          <li><a href="tel:+385916109027" class="hover:text-gold transition-colors">+385 91 610 9027</a></li>
           <li><a href="mailto:info@apartmani-orhideja.hr" class="hover:text-gold transition-colors break-all">info@apartmani-orhideja.hr</a></li>
           <li class="pt-2 text-white/50" data-hr="ID kod: HR-AB-51280-1987" data-en="Registration ID: HR-AB-51280-1987">ID kod: HR-AB-51280-1987</li>
         </ul>
@@ -765,7 +767,7 @@ tailwind.config = {
 </footer>
 
 <!-- ==================== FLOATING GUMBI ==================== -->
-<a href="https://wa.me/385912345678?text=Pozdrav%2C%20zanima%20me%20slobodan%20termin%20u%20Apartmanima%20Orhideja" target="_blank" rel="noopener"
+<a href="https://wa.me/385916109027?text=Pozdrav%2C%20zanima%20me%20slobodan%20termin%20u%20Apartmanima%20Orhideja" target="_blank" rel="noopener"
    id="waFloat" aria-label="WhatsApp kontakt"
    class="fixed bottom-6 right-6 z-40 grid place-items-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-card hover:scale-110 transition-transform duration-500 float-pulse">
   <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 relative"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5v-.5c-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2m0 18.2c-1.6 0-3.2-.5-4.6-1.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2"/></svg>
@@ -788,7 +790,7 @@ tailwind.config = {
       </div>
 
       <div class="flex items-center gap-2 shrink-0">
-        <a href="tel:+385912345678" aria-label="Nazovite nas"
+        <a href="tel:+385916109027" aria-label="Nazovite nas"
            class="hidden sm:grid place-items-center w-12 h-12 rounded-full border border-ink/15 text-ink hover:border-sea hover:text-sea transition-colors">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
         </a>
@@ -1399,9 +1401,13 @@ var navbar = document.getElementById('navbar'),
     waFloat = document.getElementById('waFloat'),
     kontaktSec = document.getElementById('kontakt');
 
-function onScroll(){
-  var y = window.scrollY;
-  var solid = y > 60;
+/* Jedini izvor istine za izgled navigacije.
+   Navigacija je bijela kad je stranica skrolana ILI kad je otvoren mobilni
+   izbornik — inace bi tamna slova izbornika stajala na svijetloj hero
+   fotografiji. Prije su onScroll i setMenu neovisno prebacivali iste klase i
+   nadjacavali se, pa je burger nakon zatvaranja izbornika ostajao taman. */
+function applyNavStyle(){
+  var solid = window.scrollY > 60 || menuOpen;
 
   navbar.classList.toggle('bg-white/95', solid);
   navbar.classList.toggle('backdrop-blur-md', solid);
@@ -1425,12 +1431,18 @@ function onScroll(){
   burger.classList.toggle('text-white', !solid);
   burger.classList.toggle('border-ink/20', solid);
   burger.classList.toggle('text-ink', solid);
+}
 
-  // Traka se pojavljuje nakon hero sekcije, ali se sklanja kad je posjetitelj
-  // vec u kontakt sekciji — ondje bi samo prekrivala gumb obrasca.
+function onScroll(){
+  var y = window.scrollY;
+  applyNavStyle();
+
+  // Traka se pojavljuje nakon hero sekcije i vise se ne vraca nakon sto
+  // posjetitelj dode do kontakt sekcije — ondje je obrazac, a dalje je samo
+  // footer, pa bi traka bila suvisna i prekrivala sadrzaj.
   var kr = kontaktSec.getBoundingClientRect();
-  var uKontaktu = kr.top < window.innerHeight * 0.65 && kr.bottom > 0;
-  var show = y > 700 && !uKontaktu;
+  var uKontaktuIliDalje = kr.top < window.innerHeight * 0.65;
+  var show = y > 700 && !uKontaktuIliDalje;
 
   stickyBar.classList.toggle('translate-y-full', !show);
   // WhatsApp gumb se podize iznad trake da se ne preklapaju
@@ -1456,10 +1468,7 @@ function setMenu(open){
   burger.setAttribute('aria-expanded', open ? 'true' : 'false');
   document.getElementById('iconOpen').classList.toggle('hidden', open);
   document.getElementById('iconClose').classList.toggle('hidden', !open);
-  if (open){
-    burger.classList.remove('text-white', 'border-white/40');
-    burger.classList.add('text-ink', 'border-ink/20');
-  }
+  applyNavStyle();
 }
 burger.addEventListener('click', function(){ setMenu(!menuOpen); });
 document.querySelectorAll('.mob-link').forEach(function(a){
