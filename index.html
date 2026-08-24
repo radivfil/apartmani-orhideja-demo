@@ -694,7 +694,8 @@ tailwind.config = {
 </main>
 
 <!-- ==================== FOOTER ==================== -->
-<footer class="bg-ink text-white/70 pt-20 pb-8">
+<!-- pb ostavlja prostor traci uz dno da ne prekrije zadnji red footera -->
+<footer class="bg-ink text-white/70 pt-20 pb-28">
   <div class="max-w-7xl mx-auto px-6 sm:px-8">
     <div class="grid md:grid-cols-4 gap-12 mb-14">
 
@@ -765,16 +766,42 @@ tailwind.config = {
 
 <!-- ==================== FLOATING GUMBI ==================== -->
 <a href="https://wa.me/385912345678?text=Pozdrav%2C%20zanima%20me%20slobodan%20termin%20u%20Apartmanima%20Orhideja" target="_blank" rel="noopener"
-   aria-label="WhatsApp kontakt"
-   class="fixed bottom-6 right-6 z-40 grid place-items-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-card hover:scale-110 transition-transform duration-300 float-pulse">
+   id="waFloat" aria-label="WhatsApp kontakt"
+   class="fixed bottom-6 right-6 z-40 grid place-items-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-card hover:scale-110 transition-transform duration-500 float-pulse">
   <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 relative"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5v-.5c-.1-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2m0 18.2c-1.6 0-3.2-.5-4.6-1.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2"/></svg>
 </a>
 
-<a href="#kontakt" id="stickyBook"
-   class="fixed bottom-6 left-6 z-40 inline-flex items-center gap-2.5 bg-ink hover:bg-sea text-white pl-5 pr-6 py-3.5 rounded-full font-semibold text-sm shadow-card translate-y-24 opacity-0 pointer-events-none transition-all duration-500">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" class="w-4 h-4"><rect x="3" y="4.5" width="18" height="17" rx="2.5"/><path d="M16 2.5v4M8 2.5v4M3 10h18"/></svg>
-  <span data-hr="Rezervirajte sada" data-en="Book now">Rezervirajte sada</span>
-</a>
+<div id="stickyBar"
+     class="fixed inset-x-0 bottom-0 z-40 translate-y-full transition-transform duration-500 ease-out">
+  <div class="bg-white/95 backdrop-blur-md border-t border-stone-dark shadow-[0_-10px_35px_-14px_rgba(26,60,94,.30)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between gap-3 sm:gap-4 py-3"
+         style="padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));">
+
+      <div class="min-w-0">
+        <p class="font-display text-lg sm:text-xl leading-tight text-ink whitespace-nowrap">
+          <span data-hr="od 90 €" data-en="from €90">od 90 €</span><span class="text-sm font-sans text-ink-soft"> /<span data-hr="noć" data-en="night">noć</span></span>
+        </p>
+        <p class="text-[11px] sm:text-xs text-ink-soft whitespace-nowrap">
+          <span class="sm:hidden" data-hr="Bez provizije" data-en="No commission">Bez provizije</span>
+          <span class="hidden sm:inline" data-hr="Direktna rezervacija · bez provizije" data-en="Direct booking · no commission">Direktna rezervacija · bez provizije</span>
+        </p>
+      </div>
+
+      <div class="flex items-center gap-2 shrink-0">
+        <a href="tel:+385912345678" aria-label="Nazovite nas"
+           class="hidden sm:grid place-items-center w-12 h-12 rounded-full border border-ink/15 text-ink hover:border-sea hover:text-sea transition-colors">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        </a>
+        <a href="#kontakt"
+           class="group inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-white px-4 sm:pl-5 sm:pr-6 py-3.5 rounded-full font-semibold text-sm shadow-soft transition-all duration-300">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" class="w-4 h-4 shrink-0"><rect x="3" y="4.5" width="18" height="17" rx="2.5"/><path d="M16 2.5v4M8 2.5v4M3 10h18"/></svg>
+          <span class="whitespace-nowrap" data-hr="Rezervirajte sada" data-en="Book now">Rezervirajte sada</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 <!-- ==================== LIGHTBOX ==================== -->
 <div id="lightbox" class="fixed inset-0 z-[70] hidden items-center justify-center bg-ink/95 backdrop-blur-sm p-4 sm:p-8">
@@ -1368,7 +1395,9 @@ var navbar = document.getElementById('navbar'),
     navMark = document.getElementById('navMark'),
     langBox = document.getElementById('langBox'),
     burger = document.getElementById('burger'),
-    sticky = document.getElementById('stickyBook');
+    stickyBar = document.getElementById('stickyBar'),
+    waFloat = document.getElementById('waFloat'),
+    kontaktSec = document.getElementById('kontakt');
 
 function onScroll(){
   var y = window.scrollY;
@@ -1397,10 +1426,15 @@ function onScroll(){
   burger.classList.toggle('border-ink/20', solid);
   burger.classList.toggle('text-ink', solid);
 
-  var show = y > 700;
-  sticky.classList.toggle('translate-y-24', !show);
-  sticky.classList.toggle('opacity-0', !show);
-  sticky.classList.toggle('pointer-events-none', !show);
+  // Traka se pojavljuje nakon hero sekcije, ali se sklanja kad je posjetitelj
+  // vec u kontakt sekciji — ondje bi samo prekrivala gumb obrasca.
+  var kr = kontaktSec.getBoundingClientRect();
+  var uKontaktu = kr.top < window.innerHeight * 0.65 && kr.bottom > 0;
+  var show = y > 700 && !uKontaktu;
+
+  stickyBar.classList.toggle('translate-y-full', !show);
+  // WhatsApp gumb se podize iznad trake da se ne preklapaju
+  waFloat.classList.toggle('-translate-y-20', show);
 
   // aktivna sekcija u navigaciji
   var pos = y + 140, current = '';
